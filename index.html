@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- FLEXBOX-UTILITIES -->
+    <link rel="stylesheet" href="/assets/css/flexbox-utilities.css" />
+  </head>
+  <body class="d-flex flex-items-center flex-justify-center">
+    <main>
+      <section class="results-summary-container d-flex flex-justify-center">
+        <div
+          class="results-summary-card d-flex flex-column flex-justify-evenly flex-items-center"
+        >
+          <h3 class="results-summary-card-heading">Your Result</h3>
+          <div
+            class="results-summary-card-result-score d-flex flex-justify-center flex-items-center"
+          >
+            <p class="d-flex flex-column"><span>76</span>of 100</p>
+          </div>
+          <h2 class="results-summary-card-conclusion">Great</h2>
+          <p class="results-summary-card-conclusion-text">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="summary-info-card d-flex flex-column flex-justify-center">
+          <h3 class="summary-info-card-heading">Summary</h3>
+          <div
+            class="summary-info-card-categories d-flex flex-column flex-justify-center"
+          ></div>
+
+          <button class="info-card-btn">
+            <span>Continue</span>
+            <div class="btn-background"></div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

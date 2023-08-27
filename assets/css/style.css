@@ -1,0 +1,229 @@
+/* FONTS */
+
+/* font-family: "Hanken Grotesk", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  resize: none;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+  /* PRIMARY */
+  --Light-red-reaction: hsl(0, 100%, 67%);
+  --Orangey-yellow-memory: hsl(39, 100%, 56%);
+  --Green-verbal: hsl(166, 100%, 37%);
+  --Blue-visual: hsl(234, 85%, 45%);
+
+  /* GRADIENT */
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* NEUTRAL */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  height: 100vh;
+}
+
+.results-summary-container {
+  max-width: 100%;
+  box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 22px 3px rgba(0, 0, 0, 0.33);
+  border-radius: 20px;
+  border: none;
+  gap: 10px;
+}
+
+.results-summary-card {
+  text-align: center;
+  color: var(--White);
+  width: 258px;
+  /* height: 340px; */
+  border-radius: 20px;
+  background-image: linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+}
+.results-summary-card-heading {
+  color: var(--Light-lavender);
+  font-size: 16px;
+}
+.results-summary-card-result-score {
+  color: var(--Light-lavender);
+  border-radius: 70%;
+  width: 130px;
+  height: 130px;
+  background-image: linear-gradient(
+    var(--Violet-blue-circle),
+    var(--Persian-blue-circle)
+  );
+  font-size: 12px;
+}
+
+.results-summary-card-result-score span {
+  color: var(--White);
+  font-size: 50px;
+}
+
+.results-summary-card-conclusion-text {
+  width: 71%;
+  color: var(--Light-lavender);
+  font-size: 12px;
+}
+
+.summary-info-card {
+  width: 260px;
+  padding: 20px 20px;
+  gap: 15px;
+}
+
+.summary-info-card-categories {
+  gap: 20px;
+}
+
+.summary-info-card-category {
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.reaction-category {
+  background-color: hsl(0, 100%, 67%, 0.1);
+}
+
+.memory-category {
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+
+.verbal-category {
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.visual-category {
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.reaction-category .info-card-category-name {
+  color: var(--Light-red-reaction);
+}
+
+.memory-category .info-card-category-name {
+  color: var(--Orangey-yellow-memory);
+}
+
+.verbal-category .info-card-category-name {
+  color: var(--Green-verbal);
+}
+
+.visual-category .info-card-category-name {
+  color: var(--Blue-visual);
+}
+
+.info-card-category-img {
+  margin-right: 5px;
+}
+
+.info-card-category-score {
+  color: var(--Light-lavender);
+  font-size: 14px;
+  /* font-weight: 500; */
+}
+
+.info-card-category-score span {
+  color: #000;
+  margin-right: 5px;
+}
+
+.info-card-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: scoreer;
+  overflow: hidden;
+  color: var(--White);
+  background: var(--Dark-gray-blue);
+  margin: 10px 0;
+}
+
+.info-card-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.info-card-btn:hover .btn-background {
+  opacity: 1;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 576px) {
+  .results-summary-container {
+    flex-direction: column;
+  }
+
+  .results-summary-container .results-summary-card {
+    height: 250px;
+  }
+
+  .results-summary-card-heading {
+    font-size: 13px;
+  }
+
+  .results-summary-card-result-score {
+    width: 100px;
+    height: 100px;
+  }
+
+  .results-summary-card-conclusion {
+    font-size: 15px;
+  }
+  .results-summary-card-conclusion-text {
+    width: 72%;
+    font-size: 10px;
+  }
+  .summary-info-card {
+    padding: 0 15px;
+  }
+  .summary-info-card-heading {
+    font-size: 14px;
+  }
+  .summary-info-card-categories {
+    gap: 10px;
+  }
+  .info-card-category-img {
+    width: 20%;
+  }
+  .info-card-category-name,
+  .info-card-category-score {
+    font-size: 12px;
+  }
+}
