@@ -7,6 +7,7 @@
   padding: 0;
   border: none;
   outline: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
   resize: none;
@@ -53,6 +54,17 @@ body {
   width: 258px;
   /* height: 340px; */
   border-radius: 20px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--Light-slate-blue-background)),
+    to(var(--Light-royal-blue-background))
+  );
+  background-image: -o-linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
   background-image: linear-gradient(
     var(--Light-slate-blue-background),
     var(--Light-royal-blue-background)
@@ -67,6 +79,17 @@ body {
   border-radius: 70%;
   width: 130px;
   height: 130px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--Violet-blue-circle)),
+    to(var(--Persian-blue-circle))
+  );
+  background-image: -o-linear-gradient(
+    var(--Violet-blue-circle),
+    var(--Persian-blue-circle)
+  );
   background-image: linear-gradient(
     var(--Violet-blue-circle),
     var(--Persian-blue-circle)
@@ -170,12 +193,25 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--Light-slate-blue-background)),
+    to(var(--Light-royal-blue-background))
+  );
+  background: -o-linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
   background: linear-gradient(
     var(--Light-slate-blue-background),
     var(--Light-royal-blue-background)
   );
   border-radius: inherit;
   opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
@@ -187,6 +223,9 @@ body {
 
 @media screen and (max-width: 576px) {
   .results-summary-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
